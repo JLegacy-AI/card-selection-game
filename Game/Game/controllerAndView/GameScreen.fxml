@@ -1,0 +1,56 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:controller="Game.controllerAndView.GameScreenController" xmlns:fx="http://javafx.com/fxml/1"
+fx:id="BORDERPANE" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" >
+<right>
+<VBox alignment="CENTER" prefHeight="643.0" prefWidth="258.0" spacing="30.0"
+style="-fx-background-color: #075e54;" BorderPane.alignment="CENTER">
+<Text fx:id="nameLabel" style="-fx-fill: white; -fx-font-family: Arial; -fx-font-size: 48;" text="Jamal"/>
+<HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="258.0" spacing="20.0">
+<padding>
+<Insets left="30.0"/>
+</padding>
+</HBox>
+<HBox alignment="CENTER_LEFT" prefHeight="49.0" prefWidth="258.0" spacing="20.0">
+<padding>
+<Insets left="30.0"/>
+</padding>
+<Text style="-fx-fill: #dcf8c6;-fx-font-family: 'Century Gothic'; -fx-font-size: 29;" text="Timer: "/>
+<Text fx:id="timerLabel" style="-fx-fill: ff0000; -fx-font-family: 'Century'; -fx-font-size: 20;" text="0">
+<HBox.margin>
+<Insets left="30.0"/>
+</HBox.margin>
+</Text>
+</HBox>
+<Button onAction="#retryOnAction" prefHeight="23.0" prefWidth="122.0" text="Retry"/>
+<Button onAction="#exitOnAction" prefHeight="23.0" prefWidth="122.0" text="Exit"/>
+</VBox>
+</right>
+<center>
+<AnchorPane style="-fx-background-color: dcf8c6;" BorderPane.alignment="CENTER">
+<GridPane fx:id="GRIDPANE" hgap="20.0" vgap="20.0" layoutX="241.0" layoutY="271.0"
+AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0"
+AnchorPane.topAnchor="50.0">
+<columnConstraints>
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+</columnConstraints>
+<rowConstraints>
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+</rowConstraints>
+</GridPane>
+</AnchorPane>
+</center>
+</BorderPane>
